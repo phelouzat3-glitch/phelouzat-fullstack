@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function PrivacyPolicy() {
   // CONFIGURATION DES PARAMÈTRES (À modifier)
-  const appName = "[Nom de votre Application]";
-  const developerEmail = "[votre.email@example.com]";
+  const appName = "profilio-fullstack"; // Nom de votre application
+  const developerEmail = "messervices465@gmail.com";
   const lastUpdated = "7 novembre 2026";
 
   return (

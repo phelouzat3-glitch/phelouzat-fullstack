@@ -19,7 +19,7 @@ const apps = [
       "Une description claire et concise de ce que fait votre application. Expliquez le problème qu'elle résout pour l'utilisateur.",
     tech: ["React Native", "TypeScript", "Node.js"],
     playStoreUrl: "#", // Vous ajouterez le lien Google Play ici plus tard
-    privacyUrl: "/privacy-app1", // Lien requis par Google
+    privacyUrl: "/privacy-my-app", // Lien requis par Google
   },
 ];
 
@@ -138,7 +138,7 @@ export default function Home() {
               Contact
             </Link>
             <Link
-              href="/privacy-app1"
+              href="/privacy-my-app"
               className="hover:text-slate-300 underline"
             >
               Privacy Policy
