@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getCurrentYear } from "../lib/current-year";
 
 // Liste de vos compétences (Stack technique)
 const skills = [
@@ -23,7 +24,9 @@ const apps = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const currentYear = await getCurrentYear();
+
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* 1. HERO SECTION (Présentation) */}
@@ -130,7 +133,7 @@ export default function Home() {
       <footer className="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
         <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>
-            © {new Date().getFullYear()} - Portfolio Développeur. Tous droits
+            © {currentYear} - Portfolio Développeur. Tous droits
             réservés.
           </p>
           <div className="flex gap-4">
