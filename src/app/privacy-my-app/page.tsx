@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PrivacyPolicy() {
   // CONFIGURATION DES PARAMÈTRES (À modifier)
-  const appName = "profilio-fullstack"; // Nom de votre application
+  const appName = "TontineCommunity"; // Nom de votre application
   const developerEmail = "messervices465@gmail.com";
   const lastUpdated = "7 novembre 2026";
 

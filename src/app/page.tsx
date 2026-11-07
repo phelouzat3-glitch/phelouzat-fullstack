@@ -15,15 +15,16 @@ const skills = [
   "CSS",
 ];
 
-// Vos applications (à afficher sur le Play Store)
+// Vos applications
 const apps = [
   {
-    title: "Nom de votre Application 1",
+    title: "TontineCommunity",
     description:
-      "Une description claire et concise de ce que fait votre application. Expliquez le problème qu'elle résout pour l'utilisateur.",
+      "Application de gestion de tontines : créez et gérez vos groupes d'épargne collective, suivez les cotisations et les tours de réception en toute simplicité.",
     tech: ["React Native", "TypeScript", "Node.js"],
-    playStoreUrl: "#", // Vous ajouterez le lien Google Play ici plus tard
-    privacyUrl: "/privacy-my-app", // Lien requis par Google
+    playStoreUrl: "", // Lien Google Play une fois l'app publiée
+    appStoreUrl: "", // Lien App Store une fois l'app validée
+    privacyUrl: "/privacy-my-app", // Lien requis par les stores
   },
 ];
 
@@ -113,19 +114,43 @@ export default async function Home() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center pt-4 border-t border-slate-700/50">
+              <div className="flex flex-wrap justify-between items-center gap-3 pt-4 border-t border-slate-700/50">
                 <Link
                   href={app.privacyUrl}
                   className="text-xs text-slate-400 hover:text-emerald-400 underline transition-colors"
                 >
                   Privacy Policy
                 </Link>
-                <a
-                  href={app.playStoreUrl}
-                  className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
-                >
-                  Google Play →
-                </a>
+                <div className="flex flex-wrap items-center gap-2">
+                  {app.playStoreUrl ? (
+                    <a
+                      href={app.playStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
+                    >
+                      Google Play →
+                    </a>
+                  ) : (
+                    <span className="text-xs font-mono text-slate-400 bg-slate-900 border border-slate-700 px-2 py-1 rounded">
+                      Bientôt sur Google Play
+                    </span>
+                  )}
+                  {app.appStoreUrl ? (
+                    <a
+                      href={app.appStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
+                    >
+                      App Store →
+                    </a>
+                  ) : (
+                    <span className="text-xs font-mono text-slate-400 bg-slate-900 border border-slate-700 px-2 py-1 rounded">
+                      En validation sur l&apos;App Store
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
           ))}
