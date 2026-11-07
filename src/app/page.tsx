@@ -10,6 +10,9 @@ const skills = [
   "NestJS",
   "C# (.NET)",
   "React Native",
+  "JavaScript",
+  "HTML",
+  "CSS",
 ];
 
 // Vos applications (à afficher sur le Play Store)
