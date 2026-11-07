@@ -20,7 +20,7 @@ const apps = [
   {
     title: "TontineCommunity",
     description:
-      "Application de gestion de tontines : créez et gérez vos groupes d'épargne collective, suivez les cotisations et les tours de réception en toute simplicité.",
+      "Application d'organisation de tontines : gérez vos groupes d'épargne collective et tenez les notes des cotisations et des tours, sans aucun transfert d'argent.",
     tech: ["React Native", "TypeScript", "Node.js"],
     playStoreUrl: "", // Lien Google Play une fois l'app publiée
     appStoreUrl: "", // Lien App Store une fois l'app validée

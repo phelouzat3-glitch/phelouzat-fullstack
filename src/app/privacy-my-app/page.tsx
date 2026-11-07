@@ -47,11 +47,18 @@ export default function PrivacyPolicy() {
               2. Collecte et Utilisation des Données
             </h2>
             <p className="mb-2">
-              <strong>Données collectées par l&apos;utilisateur :</strong>{" "}
-              L&apos;application ne nécessite aucune inscription obligatoire et
-              ne collecte pas activement de données personnelles identifiables
-              (comme votre nom ou votre adresse) à moins que vous ne les
-              partagiez volontairement (par exemple, en contactant le support).
+              <strong>Nature de l&apos;application :</strong> {appName} est un
+              outil d&apos;organisation et de tenue de notes pour vos groupes de
+              tontine. L&apos;application n&apos;effectue aucun transfert
+              d&apos;argent, ne traite aucun paiement et ne détient aucun fonds.
+            </p>
+            <p className="mb-2">
+              <strong>Données saisies par l&apos;utilisateur :</strong> Les
+              informations que vous enregistrez (nom du groupe, membres,
+              montants des cotisations, tours de réception, notes) sont
+              conservées uniquement pour vous permettre d&apos;organiser et de
+              suivre vos tontines. Aucune donnée bancaire ou de paiement
+              n&apos;est collectée.
             </p>
             <p>
               <strong>Données collectées automatiquement :</strong> Pour
