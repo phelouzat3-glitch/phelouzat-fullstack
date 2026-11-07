@@ -35,10 +35,10 @@ export default async function Home() {
           Bonjour, je m&apos;appelle
         </p>
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-          Développeur Fullstack & Mobile.
+          Développeuse Fullstack & Mobile.
         </h1>
         <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
-          Basé en Italie depuis 3 ans, je conçois et développe des applications
+          Basée en Italie depuis 3 ans, je conçois et développe des applications
           web et mobiles performantes, robustes et centrées sur
           l&apos;utilisateur.
         </p>
@@ -133,7 +133,7 @@ export default async function Home() {
       <footer className="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
         <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>
-            © {currentYear} - Portfolio Développeur. Tous droits
+            © {currentYear} - Portfolio Développeuse. Tous droits
             réservés.
           </p>
           <div className="flex gap-4">

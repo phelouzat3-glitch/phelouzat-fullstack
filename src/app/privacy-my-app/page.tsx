@@ -33,8 +33,8 @@ export default function PrivacyPolicy() {
             </h2>
             <p>
               Cette politique de confidentialité régit l&apos;utilisation de
-              l&apos;application mobile <strong>{appName}</strong> créée par le
-              développeur indépendant basé en Italie. Nous accordons une grande
+              l&apos;application mobile <strong>{appName}</strong> créée par la
+              développeuse indépendante basée en Italie. Nous accordons une grande
               importance à la vie privée de nos utilisateurs et nous nous
               engageons à protéger leurs données personnelles conformément aux
               règles du Google Play Store et du RGPD.

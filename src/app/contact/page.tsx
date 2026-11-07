@@ -16,7 +16,7 @@ export default async function Contact() {
           ← Retour à l&apos;accueil
         </Link>
         <span className="text-xs font-mono text-slate-500">
-          Support Développeur
+          Support Développeuse
         </span>
       </nav>
 
@@ -60,7 +60,7 @@ export default async function Contact() {
       {/* FOOTER */}
       <footer className="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
         <p>
-          © {currentYear} - Support Développeur. Tous droits réservés.
+          © {currentYear} - Support Développeuse. Tous droits réservés.
         </p>
       </footer>
     </div>

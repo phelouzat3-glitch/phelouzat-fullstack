@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Développeur Fullstack & Mobile",
+  title: "Développeuse Fullstack & Mobile",
   description:
-    "Portfolio de développeur fullstack et mobile : applications web et mobiles performantes, robustes et centrées sur l'utilisateur.",
+    "Portfolio de développeuse fullstack et mobile : applications web et mobiles performantes, robustes et centrées sur l'utilisateur.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
