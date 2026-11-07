@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export default function PrivacyPolicy() {
-  const appName = "Tontine Community";
-  const developerEmail = "phelouzat3@gmail.com";
+  const appName = "TontineCommunity";
+  const developerEmail = "messervices465@gmail.com";
   const lastUpdated = "4 novembre 2026";
 
   const registrationData = [
