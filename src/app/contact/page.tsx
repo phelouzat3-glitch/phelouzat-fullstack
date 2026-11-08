@@ -42,9 +42,14 @@ export default async function Contact() {
                 Contact Direct
               </h2>
               {/* REMPLACEZ PAR VOTRE ADRESSE EMAIL PRO */}
-              <p className="text-white font-medium text-sm break-all select-all">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=messervices465@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-medium text-sm break-all hover:text-emerald-400 underline transition-colors"
+              >
                 messervices465@gmail.com
-              </p>
+              </a>
             </div>
 
             <div className="bg-slate-800/40 border border-slate-800 p-5 rounded-lg">

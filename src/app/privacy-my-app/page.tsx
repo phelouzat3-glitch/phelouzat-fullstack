@@ -156,9 +156,14 @@ export default function PrivacyPolicy() {
               <strong className="text-white">
                 Contact protection des données :
               </strong>{" "}
-              <span className="text-emerald-400 font-mono">
+              <a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${developerEmail}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 font-mono hover:text-emerald-300 underline transition-colors"
+              >
                 {developerEmail}
-              </span>
+              </a>
             </p>
           </section>
 
@@ -283,9 +288,14 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="mb-2">
               Vous disposez, sur simple demande à{" "}
-              <span className="text-emerald-400 font-mono">
+              <a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${developerEmail}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 font-mono hover:text-emerald-300 underline transition-colors"
+              >
                 {developerEmail}
-              </span>{" "}
+              </a>{" "}
               :
             </p>
             <ul className="list-disc pl-5 space-y-1">
