@@ -43,9 +43,7 @@ export default async function Contact() {
               </h2>
               {/* REMPLACEZ PAR VOTRE ADRESSE EMAIL PRO */}
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=messervices465@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:messervices465@gmail.com"
                 className="text-white font-medium text-sm break-all hover:text-emerald-400 underline transition-colors"
               >
                 messervices465@gmail.com

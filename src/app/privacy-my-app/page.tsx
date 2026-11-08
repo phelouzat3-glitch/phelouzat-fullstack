@@ -157,9 +157,7 @@ export default function PrivacyPolicy() {
                 Contact protection des données :
               </strong>{" "}
               <a
-                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${developerEmail}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${developerEmail}`}
                 className="text-emerald-400 font-mono hover:text-emerald-300 underline transition-colors"
               >
                 {developerEmail}
@@ -289,9 +287,7 @@ export default function PrivacyPolicy() {
             <p className="mb-2">
               Vous disposez, sur simple demande à{" "}
               <a
-                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${developerEmail}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${developerEmail}`}
                 className="text-emerald-400 font-mono hover:text-emerald-300 underline transition-colors"
               >
                 {developerEmail}
