@@ -55,7 +55,19 @@ const mobileApps: Project[] = [
     title: "TontineCommunity",
     description:
       "Application d'organisation de tontines : gérez vos groupes d'épargne collective et tenez les notes des cotisations et des tours, sans aucun transfert d'argent.",
-    tech: ["React Native", "TypeScript", "Node.js"],
+    tech: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Supabase",
+      "Stripe",
+      "Tesseract.js",
+      "Resend",
+      "EAS Build",
+      "Jest",
+    ],
     platform: "mobile",
     status: "in-progress",
     playStoreUrl: "",
@@ -69,11 +81,19 @@ const webProjects: Project[] = [
   {
     title: "Classifica Basket",
     description:
-      "Application web officielle de l'ABC Castelfiorentino (Serie C masculine et féminine) : classements, calendrier, résultats, statistiques, fiches joueurs et équipes, actualités et notifications.",
-    tech: ["React Native", "Expo", "TypeScript", "NestJS", "PostgreSQL", "Docker"],
+      "Application web en cours de développement pour l'ABC Castelfiorentino (Serie C masculine et féminine) : classements, calendrier, résultats, statistiques, fiches joueurs et équipes, actualités et notifications.",
+    tech: [
+      "React Native",
+      "Expo",
+      "React Native Web",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "JWT",
+      "Docker",
+    ],
     platform: "web",
-    status: "in-progress",
-    liveUrl: "https://classifica-basket.vercel.app",
+    status: "coming-soon",
   },
 ];
 
@@ -146,6 +166,11 @@ function ProjectCard({ project }: { project: Project }) {
             >
               Voir le site →
             </a>
+          )}
+          {project.platform === "web" && !project.liveUrl && (
+            <span className="text-xs font-mono text-slate-400 bg-slate-900 border border-slate-700 px-2 py-1 rounded">
+              Pas encore disponible
+            </span>
           )}
           {project.platform === "mobile" && (
             <>
