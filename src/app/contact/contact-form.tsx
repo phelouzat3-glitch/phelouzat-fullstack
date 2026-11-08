@@ -2,28 +2,69 @@
 
 import { useState } from "react";
 
+const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+
 export function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Plus tard, vous pourrez lier cela à un service comme Formspree, Resend ou une API Route Next.js
-    if (email && message) {
-      setStatus("success");
+
+    if (!FORMSPREE_ENDPOINT) {
+      setStatus("error");
+      return;
+    }
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    setStatus("loading");
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+
+      if (!response.ok) {
+        throw new Error("Formspree error");
+      }
+
+      form.reset();
       setEmail("");
       setMessage("");
-    } else {
+      setStatus("success");
+    } catch {
       setStatus("error");
     }
   };
+
+  const isLoading = status === "loading";
 
   return (
     <form
       onSubmit={handleSubmit}
       className="md:col-span-2 space-y-4 bg-slate-800 border border-slate-700 p-6 rounded-lg"
     >
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nouveau message depuis le portfolio"
+      />
+
       <div>
         <label
           htmlFor="email"
@@ -33,6 +74,7 @@ export function ContactForm() {
         </label>
         <input
           id="email"
+          name="email"
           type="email"
           required
           value={email}
@@ -51,6 +93,7 @@ export function ContactForm() {
         </label>
         <textarea
           id="message"
+          name="message"
           required
           rows={5}
           value={message}
@@ -62,22 +105,25 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold rounded text-sm transition-colors"
+        disabled={isLoading}
+        className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 disabled:opacity-60 disabled:cursor-not-allowed text-slate-950 font-semibold rounded text-sm transition-colors"
       >
-        Envoyer le message
+        {isLoading ? "Envoi en cours..." : "Envoyer le message"}
       </button>
 
-      {/* MESSAGES D'ÉTAT */}
-      {status === "success" && (
-        <p className="text-sm text-emerald-400 font-mono mt-2 bg-emerald-500/10 p-3 rounded border border-emerald-500/20">
-          ✓ Message simulé avec succès ! Merci de votre intérêt.
-        </p>
-      )}
-      {status === "error" && (
-        <p className="text-sm text-rose-400 font-mono mt-2 bg-rose-500/10 p-3 rounded border border-rose-500/20">
-          ⚠ Veuillez remplir tous les champs obligatoires.
-        </p>
-      )}
+      <div aria-live="polite">
+        {status === "success" && (
+          <p className="text-sm text-emerald-400 font-mono mt-2 bg-emerald-500/10 p-3 rounded border border-emerald-500/20">
+            ✓ Message envoyé avec succès ! Merci de votre intérêt.
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-sm text-rose-400 font-mono mt-2 bg-rose-500/10 p-3 rounded border border-rose-500/20">
+            ⚠ L&apos;envoi a échoué. Réessayez ou écrivez-moi directement par
+            e-mail.
+          </p>
+        )}
+      </div>
     </form>
   );
 }
