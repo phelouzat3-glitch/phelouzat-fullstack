@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
     "du droit à l'effacement (ou via « Supprimer mon compte » directement) ;",
     "du droit d'opposition et à la limitation ;",
     "du droit à la portabilité ;",
-    "du droit d'introduire une réclamation auprès de la CNIL (www.cnil.fr) ou de l'autorité de contrôle de votre pays.",
+    "du droit d'introduire une réclamation auprès du Garante per la protezione dei dati personali (www.garanteprivacy.it), autorité de contrôle italienne du pays d'établissement de l'éditeur, ou auprès de l'autorité de contrôle de votre pays de résidence.",
   ];
 
   const security = [
