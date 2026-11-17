@@ -29,23 +29,28 @@ export default function PhotoProfil() {
 
   return (
     <>
-      <div className="relative w-44 h-44 md:w-72 md:h-72 shrink-0 self-start md:self-center">
-        <button
-          type="button"
-          onClick={() => setOuvert(true)}
-          aria-label="Agrandir la photo de profil"
-          className="group relative block h-full w-full cursor-zoom-in rounded-full focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/60"
-        >
-          <Image
-            src="/photo-profil.jpg"
-            alt="Portrait de Fernande Phelouzat Tcheudjeu, développeuse fullstack et mobile"
-            fill
-            preload
-            sizes="(min-width: 768px) 288px, 176px"
-            className="rounded-full object-cover ring-4 ring-emerald-500/40 shadow-2xl shadow-emerald-500/10 transition-transform duration-300 group-hover:scale-[1.03]"
-          />
-          <span className="pointer-events-none absolute inset-0 rounded-full bg-slate-950/0 transition-colors duration-300 group-hover:bg-slate-950/20" />
-        </button>
+      <div className="flex flex-col items-center gap-3 shrink-0 self-start md:self-center">
+        <div className="relative w-44 h-44 md:w-72 md:h-72">
+          <button
+            type="button"
+            onClick={() => setOuvert(true)}
+            aria-label="Agrandir la photo de profil"
+            className="group relative block h-full w-full cursor-zoom-in rounded-full focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/60"
+          >
+            <Image
+              src="/photo-profil.jpg"
+              alt="Portrait de Fernande Phelouzat Tcheudjeu, développeuse fullstack et mobile"
+              fill
+              preload
+              sizes="(min-width: 768px) 288px, 176px"
+              className="rounded-full object-cover ring-4 ring-emerald-500/40 shadow-2xl shadow-emerald-500/10 transition-transform duration-300 group-hover:scale-[1.03]"
+            />
+            <span className="pointer-events-none absolute inset-0 rounded-full bg-slate-950/0 transition-colors duration-300 group-hover:bg-slate-950/20" />
+          </button>
+        </div>
+        <p className="text-center text-sm font-mono tracking-wide text-slate-400">
+          Tcheudjeu Fernande Phelouzat
+        </p>
       </div>
 
       {ouvert && (

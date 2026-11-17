@@ -223,9 +223,12 @@ export default async function Home() {
             <p className="text-emerald-400 font-mono text-sm mb-3">
               Bonjour, je m&apos;appelle
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Développeuse Fullstack & Mobile.
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-3 tracking-tight">
+              PHELOUZAT
             </h1>
+            <p className="text-xl md:text-2xl font-semibold text-slate-200 mb-4">
+              Je suis développeuse Fullstack &amp; Mobile.
+            </p>
             <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
               Basée en Italie depuis 3 ans, je conçois et développe des
               applications web et mobiles performantes, robustes et centrées sur
