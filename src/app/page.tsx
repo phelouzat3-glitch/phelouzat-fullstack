@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getCurrentYear } from "../lib/current-year";
 
@@ -216,31 +217,46 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* 1. HERO SECTION (Présentation) */}
-      <header className="max-w-5xl mx-auto px-6 py-20 md:py-32 flex flex-col justify-center">
-        <p className="text-emerald-400 font-mono text-sm mb-3">
-          Bonjour, je m&apos;appelle
-        </p>
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-          Développeuse Fullstack & Mobile.
-        </h1>
-        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
-          Basée en Italie depuis 3 ans, je conçois et développe des applications
-          web et mobiles performantes, robustes et centrées sur
-          l&apos;utilisateur.
-        </p>
-        <div className="flex gap-4">
-          <a
-            href="#projects"
-            className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold rounded transition-colors text-center"
-          >
-            Voir mes projets
-          </a>
-          <Link
-            href="/contact"
-            className="px-6 py-3 border border-slate-700 hover:border-emerald-400 text-slate-300 hover:text-emerald-400 rounded transition-colors text-center"
-          >
-            Me contacter
-          </Link>
+      <header className="max-w-5xl mx-auto px-6 py-20 md:py-32">
+        <div className="flex flex-col-reverse md:flex-row md:items-center gap-10 md:gap-16">
+          <div className="flex-1">
+            <p className="text-emerald-400 font-mono text-sm mb-3">
+              Bonjour, je m&apos;appelle
+            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              Développeuse Fullstack & Mobile.
+            </h1>
+            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
+              Basée en Italie depuis 3 ans, je conçois et développe des
+              applications web et mobiles performantes, robustes et centrées sur
+              l&apos;utilisateur.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold rounded transition-colors text-center"
+              >
+                Voir mes projets
+              </a>
+              <Link
+                href="/contact"
+                className="px-6 py-3 border border-slate-700 hover:border-emerald-400 text-slate-300 hover:text-emerald-400 rounded transition-colors text-center"
+              >
+                Me contacter
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative w-40 h-40 md:w-64 md:h-64 shrink-0 self-start md:self-center">
+            <Image
+              src="/photo-profil.jpg"
+              alt="Portrait de Fernande Phelouzat Tcheudjeu, développeuse fullstack et mobile"
+              fill
+              preload
+              sizes="(min-width: 768px) 256px, 160px"
+              className="rounded-full object-cover ring-4 ring-emerald-500/40 shadow-2xl shadow-emerald-500/10"
+            />
+          </div>
         </div>
       </header>
 
