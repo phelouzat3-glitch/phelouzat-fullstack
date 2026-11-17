@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Politique de confidentialité — Tontine Community",
+  description:
+    "Politique de confidentialité de l'application mobile Tontine Community : données collectées, finalités, destinataires, conservation et droits RGPD.",
+};
+
 export default function PrivacyPolicy() {
-  const appName = "TontineCommunity";
+  const appName = "Tontine Community";
   const developerEmail = "messervices465@gmail.com";
-  const lastUpdated = "4 novembre 2026";
+  const lastUpdated = "17 novembre 2026";
 
   const registrationData = [
     {
@@ -11,8 +18,8 @@ export default function PrivacyPolicy() {
       text: "nom, prénom, email, téléphone, nationalité, âge (vérifié ≥ 18 ans).",
     },
     {
-      label: "Pièce d'identité",
-      text: "numéro de CNI et photos recto/verso (relevées par reconnaissance optique pour accélérer l'inscription, jamais diffusées aux autres membres).",
+      label: "Pièce d'identité (facultative)",
+      text: "numéro de CNI et photos recto/verso, uniquement si vous choisissez de certifier volontairement votre identité pour débloquer des limites supplémentaires (deuxième tontine, plafond de membres). Ces documents sont relevés par reconnaissance optique, restent privés et ne sont jamais diffusés aux autres membres. L'application reste pleinement utilisable sans fournir de CNI.",
     },
     {
       label: "Photo de profil",
@@ -42,7 +49,7 @@ export default function PrivacyPolicy() {
     },
     {
       goal: "Lutter contre la fraude financière (bannissements, blacklist)",
-      data: "CNI, téléphone",
+      data: "CNI (si fournie), téléphone",
     },
     {
       goal: "Envoyer les notifications et emails transactionnels",
@@ -50,7 +57,7 @@ export default function PrivacyPolicy() {
     },
     {
       goal: "Gérer les paiements d'abonnement",
-      data: "Email + Stripe",
+      data: "Email + Google Play / App Store",
     },
     {
       goal: "Sécurité et conformité légale",
@@ -68,12 +75,16 @@ export default function PrivacyPolicy() {
       text: "base de données et stockage des photos (CNI, avatars, reçus).",
     },
     {
-      name: "Stripe",
-      text: "paiements de l'abonnement Premium (selon le canal).",
-    },
-    {
       name: "Google Play",
       text: "paiements de l'abonnement Premium sur Android.",
+    },
+    {
+      name: "App Store (Apple)",
+      text: "paiements de l'abonnement Premium sur iOS (StoreKit).",
+    },
+    {
+      name: "Stripe",
+      text: "paiements de l'abonnement Premium sur la version web uniquement (jamais dans l'application iOS).",
     },
     {
       name: "Resend",
@@ -196,14 +207,16 @@ export default function PrivacyPolicy() {
               1.3. Données de paiement (abonnement Premium)
             </h3>
             <p>
-              Sur Android, l&apos;abonnement Premium est traité par{" "}
-              <strong>Google Play Billing</strong>. Selon le canal de paiement,{" "}
-              <strong>Stripe</strong> peut également être utilisé.
-              L&apos;application ne stocke <strong>jamais</strong> les numéros de
-              carte bancaire : elle reçoit uniquement le statut de
-              l&apos;abonnement et l&apos;identifiant de votre compte. Sur iOS,
-              l&apos;abonnement n&apos;est pas disponible à l&apos;achat dans
-              l&apos;application.
+              Sur <strong>Android</strong>, l&apos;abonnement Premium est traité
+              par <strong>Google Play Billing</strong>. Sur <strong>iOS</strong>,
+              il est traité par l&apos;<strong>App Store d&apos;Apple</strong>{" "}
+              (StoreKit). Sur la <strong>version web</strong> uniquement,{" "}
+              <strong>Stripe</strong> peut être utilisé. L&apos;application ne
+              stocke <strong>jamais</strong> les numéros de carte bancaire :
+              elle reçoit uniquement le statut de l&apos;abonnement, la date
+              d&apos;expiration et l&apos;identifiant de transaction nécessaire
+              à la vérification. Aucun lien de paiement externe n&apos;est
+              affiché dans l&apos;application iOS.
             </p>
           </section>
 

@@ -199,7 +199,7 @@ function ProjectCard({ project }: { project: Project }) {
                 </a>
               ) : (
                 <span className="text-xs font-mono text-slate-400 bg-slate-900 border border-slate-700 px-2 py-1 rounded">
-                  En validation sur l&apos;App Store
+                  Bientôt sur l&apos;App Store
                 </span>
               )}
             </>
