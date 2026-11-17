@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getCurrentYear } from "../lib/current-year";
+import PhotoProfil from "./photo-profil";
 
 // Liste de vos compétences (Stack technique)
 const skills = [
@@ -247,16 +247,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="relative w-40 h-40 md:w-64 md:h-64 shrink-0 self-start md:self-center">
-            <Image
-              src="/photo-profil.jpg"
-              alt="Portrait de Fernande Phelouzat Tcheudjeu, développeuse fullstack et mobile"
-              fill
-              preload
-              sizes="(min-width: 768px) 256px, 160px"
-              className="rounded-full object-cover ring-4 ring-emerald-500/40 shadow-2xl shadow-emerald-500/10"
-            />
-          </div>
+          <PhotoProfil />
         </div>
       </header>
 
